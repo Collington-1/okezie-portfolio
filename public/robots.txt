@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://okeziecollington.com/sitemap.xml

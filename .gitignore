@@ -1,0 +1,26 @@
+node_modules
+dist
+dist-ssr
+*.local
+*.tsbuildinfo
+.env
+.env.local
+.DS_Store
+*.log
+npm-debug.log*
+.vscode/*
+!.vscode/extensions.json
+
+# Raw personal asset dumps — not used directly by the site.
+# Processed/optimized copies of these already live in src/assets/images/.
+/Active Photos/
+/Certifications/
+/CV and Portfolio/
+/Digital Training/
+/Case Studies/
+/testimonials/
+/FAQ/
+/My gallery/
+/Projects/
+/Videos/
+/Collington Logo.png
