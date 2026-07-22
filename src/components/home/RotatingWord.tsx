@@ -1,7 +1,13 @@
 import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 
-const words = ['Websites', 'Business Apps', 'eCommerce Solutions', 'AI Automations', 'Meta Ads']
+const words = [
+  { text: 'Websites' },
+  { text: 'Business Apps' },
+  { text: 'eCommerce Solutions', mobileScale: 'max-sm:scale-75' },
+  { text: 'AI Automations', mobileScale: 'max-sm:scale-90' },
+  { text: 'Meta Ads' },
+]
 
 export default function RotatingWord() {
   const [index, setIndex] = useState(0)
@@ -13,18 +19,22 @@ export default function RotatingWord() {
     return () => clearInterval(interval)
   }, [])
 
+  const word = words[index]
+
   return (
-    <span className="relative inline-flex h-[1em] items-center overflow-hidden align-bottom text-[1.65rem] sm:text-[2.5rem] lg:text-[3.1rem]">
+    <span className="relative inline-flex h-[1em] items-center overflow-hidden align-bottom">
       <AnimatePresence mode="wait">
         <motion.span
-          key={words[index]}
+          key={word.text}
           initial={{ y: '100%', opacity: 0 }}
           animate={{ y: '0%', opacity: 1 }}
           exit={{ y: '-100%', opacity: 0 }}
           transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-          className="whitespace-nowrap text-gradient font-bold italic"
+          className="whitespace-nowrap"
         >
-          {words[index]}
+          <span className={`inline-block origin-left text-gradient font-bold italic ${word.mobileScale ?? ''}`}>
+            {word.text}
+          </span>
         </motion.span>
       </AnimatePresence>
     </span>
