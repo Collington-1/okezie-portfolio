@@ -484,6 +484,84 @@ export const projects: Project[] = [
     ],
     highlights: ['Fully bespoke, non-templated design', 'Visual identity distinct from competitors', 'Brand personality-led design decisions'],
   },
+  {
+    id: 'perfectcareersng',
+    title: 'PerfectCareers',
+    client: 'PerfectCareers',
+    categories: ['website'],
+    image: 'perfectcareersng',
+    role: 'Website Developer',
+    technologies: ['Next.js', 'React', 'Netlify'],
+    problem:
+      'A career-services platform needed to bring live jobs, scholarships and grants together with paid CV, LinkedIn and interview support — in one credible, fast-moving site, not a static brochure page.',
+    solution:
+      'I built a Next.js platform structured around live listings — jobs, scholarships and grants filterable in one place — alongside dedicated service pages for CV writing, LinkedIn optimization, SOP writing and interview prep, backed by trust signals like verified-listing messaging and real usage numbers.',
+    outcome:
+      'A fast, content-heavy platform that reads as a credible career authority rather than a job board template, with a clear path from browsing listings to booking paid career services.',
+    overview:
+      'PerfectCareers needed to do two jobs at once: work as a genuine jobs-and-scholarships board people check regularly, and convert that traffic into paid CV, LinkedIn, SOP and interview-prep services. I built the platform on Next.js with that dual purpose baked into the structure from the start — listings and services live side by side, not siloed.',
+    roleDetails: [
+      'Next.js build for a content- and listings-heavy platform',
+      'Filterable jobs, scholarships and grants listings',
+      'Dedicated pages for each paid career service',
+      'Trust-focused homepage structure (verified listings, live stats)',
+    ],
+    goals: [
+      'Make live opportunities easy to browse and filter',
+      'Turn listing traffic into paid service bookings',
+      'Read as credible and current, not a static template',
+    ],
+    strategy: [
+      { title: 'Structure around two audiences', description: 'Built the homepage to serve both browsers looking for opportunities and job-seekers ready to pay for expert help, without either path feeling like an afterthought.' },
+      { title: 'Lead with trust signals', description: 'Surfaced verified-listing messaging and real usage numbers early, since credibility is the whole sell for a career platform.' },
+      { title: 'Keep listings fast and filterable', description: 'Built the jobs/scholarships/grants board to stay fast and easy to scan even as listings grow.' },
+    ],
+    highlights: [
+      'Unified jobs, scholarships and grants board',
+      'Dedicated funnel for CV, LinkedIn, SOP and interview services',
+      'Built on Next.js for speed at content scale',
+    ],
+    liveUrl: 'https://perfectcareersng.netlify.app/',
+  },
+  {
+    id: 'npgc-church',
+    title: 'NPGC Church Website',
+    client: 'The New Paradigm Global Church',
+    categories: ['website'],
+    image: 'npgc',
+    role: 'Website Developer',
+    technologies: ['Next.js', 'React', 'Netlify'],
+    problem:
+      'A growing Port Harcourt church needed a site that felt like a real spiritual home online — sermons, programs, testimonies and giving all in one place — instead of a generic template with a service schedule bolted on.',
+    solution:
+      'I built a Next.js site structured around how a congregation actually engages: latest sermons pulled to the front, upcoming programs with clear details, a pastor profile that builds trust, member testimonials, a photo gallery of church life, and a direct giving and contact path.',
+    outcome:
+      'A warm, content-rich church site that makes it easy for both members and first-time visitors to find a service, catch up on a sermon, or give — without feeling like a corporate template with a cross on it.',
+    overview:
+      "NPGC needed its website to carry the same warmth as an actual Sunday service — not just list service times. I built the site around the things a real congregation cares about: recent sermons, what's coming up, who the pastor is, what members say about their experience, and a simple way to give or reach out.",
+    roleDetails: [
+      'Next.js build for a content-rich church website',
+      'Sermons, programs, pastor profile and testimonials sections',
+      'Photo gallery of church life and events',
+      'Giving and contact flow, including WhatsApp',
+    ],
+    goals: [
+      'Make the church feel welcoming to first-time visitors online',
+      'Keep members up to date on sermons and programs',
+      'Give a simple, trustworthy path to give and connect',
+    ],
+    strategy: [
+      { title: 'Design around the congregation, not a template', description: 'Structured the homepage around sermons, programs and testimonials — what an actual church community engages with — instead of a generic corporate layout.' },
+      { title: 'Put the pastor and people forward', description: "Gave the pastor's profile and member testimonials real visual weight, since trust in leadership matters as much as content for a church site." },
+      { title: 'Make giving and contact effortless', description: 'Kept the giving and contact paths short and visible, including a direct WhatsApp option for a more personal first touch.' },
+    ],
+    highlights: [
+      'Sermons, programs and testimonials unified in one experience',
+      'Pastor profile and member stories built for trust',
+      'Simple, visible giving and WhatsApp contact paths',
+    ],
+    liveUrl: 'https://thenpgc.org/',
+  },
 ]
 
 export const filterOptions: { label: string; value: Project['categories'][number] | 'all' }[] = [
