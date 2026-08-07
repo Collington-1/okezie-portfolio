@@ -567,6 +567,7 @@ export const projects: Project[] = [
 export const filterOptions: { label: string; value: Project['categories'][number] | 'all' }[] = [
   { label: 'All', value: 'all' },
   { label: 'Website', value: 'website' },
+  { label: 'App', value: 'app' },
   { label: 'SEO', value: 'seo' },
   { label: 'AI', value: 'ai' },
   { label: 'Ecommerce', value: 'ecommerce' },

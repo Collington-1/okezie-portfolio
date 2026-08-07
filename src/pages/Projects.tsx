@@ -1,4 +1,5 @@
-import { useMemo, useState } from 'react'
+import { useMemo } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import SEO from '@/components/ui/SEO'
 import Container from '@/components/ui/Container'
 import Reveal from '@/components/ui/Reveal'
@@ -8,8 +9,20 @@ import { getImage } from '@/utils/images'
 import { projects } from '@/data/projects'
 import type { ProjectCategory } from '@/types'
 
+const validCategories: (ProjectCategory | 'all')[] = ['all', 'website', 'app', 'seo', 'ai', 'ecommerce', 'meta-ads']
+
 export default function Projects() {
-  const [filter, setFilter] = useState<ProjectCategory | 'all'>('all')
+  const [searchParams, setSearchParams] = useSearchParams()
+  const requested = searchParams.get('category') as ProjectCategory | 'all' | null
+  const filter: ProjectCategory | 'all' = requested && validCategories.includes(requested) ? requested : 'all'
+
+  function setFilter(next: ProjectCategory | 'all') {
+    if (next === 'all') {
+      setSearchParams({})
+    } else {
+      setSearchParams({ category: next })
+    }
+  }
 
   const filtered = useMemo(
     () => (filter === 'all' ? projects : projects.filter((p) => p.categories.includes(filter))),
