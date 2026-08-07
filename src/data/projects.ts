@@ -562,6 +562,44 @@ export const projects: Project[] = [
     ],
     liveUrl: 'https://thenpgc.org/',
   },
+  {
+    id: 'flowleads',
+    title: 'FlowLeads',
+    client: 'FlowLeads',
+    categories: ['app'],
+    image: 'flowleads',
+    role: 'Founder & Developer',
+    technologies: ['React', 'Vite', 'Tailwind CSS', 'Node.js', 'Supabase'],
+    problem:
+      'Teams following up with leads over WhatsApp risk getting their number banned the moment they message too many people too fast — but slowing down manually means leads go cold and follow-ups get missed.',
+    solution:
+      "I'm building FlowLeads, a free WhatsApp + email CRM with a warm-up ladder built in by design: new numbers start at 20 messages a day and ramp automatically to full volume over 14 days, campaigns pause themselves once they hit the daily cap, and every contact stays permanently bound to the one number it knows — so a number can never look like it's blasting.",
+    outcome:
+      'A product where ban-safety is the default, not an opt-in setting — a unified inbox for WhatsApp and email, up to three numbers per team, and campaigns that pace themselves without anyone babysitting a send queue.',
+    overview:
+      "FlowLeads is my own product, built around a problem I kept seeing: teams either follow up with leads too slowly and lose them, or move too fast on WhatsApp and get the number banned. I designed the entire safety engine — the warm-up ladder, the daily caps, the self-pausing campaigns — as the default behavior, not a setting someone has to remember to turn on.",
+    roleDetails: [
+      'Product design and full build, frontend to backend',
+      'Warm-up ladder and daily-cap safety engine',
+      'Unified WhatsApp + email inbox per contact',
+      'React/Vite frontend on Netlify, Node.js backend, Supabase for data and auth',
+    ],
+    goals: [
+      'Make ban-safe WhatsApp follow-up the default, not extra work',
+      'Unify WhatsApp and email history per contact in one thread',
+      'Let campaigns pace and pause themselves without manual babysitting',
+    ],
+    strategy: [
+      { title: 'Design the safety engine first', description: 'Built the warm-up ladder and daily-cap logic before any messaging feature, so ban-safety is structural, not bolted on.' },
+      { title: 'One inbox, every channel', description: 'Unified WhatsApp and email into a single per-contact thread instead of splitting conversations across tools.' },
+      { title: 'Automate the pacing', description: 'Made campaigns pause themselves at the daily cap and resume automatically, removing the need to manually throttle sends.' },
+    ],
+    highlights: [
+      'Warm-up ladder ramps numbers over 14 days automatically',
+      'Up to 3 WhatsApp numbers per team, each with its own pacing',
+      'Campaigns that pause and resume themselves at the daily cap',
+    ],
+  },
 ]
 
 export const filterOptions: { label: string; value: Project['categories'][number] | 'all' }[] = [
