@@ -599,6 +599,7 @@ export const projects: Project[] = [
       'Up to 3 WhatsApp numbers per team, each with its own pacing',
       'Campaigns that pause and resume themselves at the daily cap',
     ],
+    liveUrl: 'https://flowleadsapp.netlify.app/',
   },
 ]
 
