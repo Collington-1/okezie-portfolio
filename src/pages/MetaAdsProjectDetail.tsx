@@ -1,5 +1,5 @@
 import { Navigate, useParams, Link } from 'react-router-dom'
-import { ArrowLeft, ArrowRight, Search, Target, MessageCircle, TrendingUp, type LucideIcon } from 'lucide-react'
+import { ArrowLeft, ArrowRight, Search, Target, MessageCircle, TrendingUp, FlaskConical, MapPin, type LucideIcon } from 'lucide-react'
 import SEO from '@/components/ui/SEO'
 import Container from '@/components/ui/Container'
 import Reveal from '@/components/ui/Reveal'
@@ -7,7 +7,7 @@ import Button from '@/components/ui/Button'
 import { getImage } from '@/utils/images'
 import { metaAdsProjects } from '@/data/metaAdsProjects'
 
-const iconMap: Record<string, LucideIcon> = { Search, Target, MessageCircle, TrendingUp }
+const iconMap: Record<string, LucideIcon> = { Search, Target, MessageCircle, TrendingUp, FlaskConical, MapPin }
 
 export default function MetaAdsProjectDetail() {
   const { id } = useParams<{ id: string }>()
