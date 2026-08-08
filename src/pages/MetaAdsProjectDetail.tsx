@@ -1,5 +1,5 @@
 import { Navigate, useParams, Link } from 'react-router-dom'
-import { ArrowLeft, ArrowRight, Search, Target, MessageCircle, TrendingUp, FlaskConical, MapPin, type LucideIcon } from 'lucide-react'
+import { ArrowLeft, ArrowRight, Download, Search, Target, MessageCircle, TrendingUp, FlaskConical, MapPin, type LucideIcon } from 'lucide-react'
 import SEO from '@/components/ui/SEO'
 import Container from '@/components/ui/Container'
 import Reveal from '@/components/ui/Reveal'
@@ -57,6 +57,18 @@ export default function MetaAdsProjectDetail() {
               <span>Client: {study.client}</span>
               <span className="h-1 w-1 rounded-full bg-border" aria-hidden />
               <span>Role: {study.role}</span>
+              {study.reportUrl && (
+                <>
+                  <span className="h-1 w-1 rounded-full bg-border" aria-hidden />
+                  <a
+                    href={study.reportUrl}
+                    download
+                    className="inline-flex items-center gap-1.5 font-semibold text-primary hover:text-primary-hover"
+                  >
+                    Download full report <Download size={14} />
+                  </a>
+                </>
+              )}
             </div>
           </Reveal>
         </Container>

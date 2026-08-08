@@ -132,6 +132,7 @@ export const metaAdsProjects: MetaAdsCaseStudy[] = [
         caption: 'Platform-level placement breakdown for Test Leads 2 Ad, comparing reach against results.',
       },
     ],
+    reportUrl: '/Party-and-Skoothings-Meta-Ads-Test-Report.pdf',
     ctaTitle: 'Want to test before you scale your ad budget?',
     ctaDescription: "Let's find out what actually works for your audience before the big budget goes out.",
   },

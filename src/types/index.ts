@@ -71,6 +71,7 @@ export interface MetaAdsCaseStudy {
   outcomeDescription: string
   highlights: { icon: string; text: string }[]
   gallery?: MetaAdsGalleryImage[]
+  reportUrl?: string
   ctaTitle: string
   ctaDescription: string
 }
