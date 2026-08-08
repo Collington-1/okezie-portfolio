@@ -151,6 +151,34 @@ export default function MetaAdsProjectDetail() {
         </Container>
       </section>
 
+      {study.gallery && study.gallery.length > 0 && (
+        <section className="bg-soft py-16 sm:py-20">
+          <Container>
+            <Reveal>
+              <p className="text-xs font-semibold uppercase tracking-widest text-primary">Inside The Numbers</p>
+              <h2 className="mt-3 text-balance text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
+                Straight from Ads Manager.
+              </h2>
+            </Reveal>
+            <div className="mt-10 grid gap-6 sm:grid-cols-2">
+              {study.gallery.map((item, i) => (
+                <Reveal key={item.image} delay={i * 0.06}>
+                  <div className="overflow-hidden rounded-2xl border border-border bg-white shadow-soft">
+                    <img
+                      src={getImage(item.image)}
+                      alt={item.caption}
+                      className="w-full object-cover object-top"
+                      loading="lazy"
+                    />
+                    <p className="p-5 text-sm leading-relaxed text-muted">{item.caption}</p>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </Container>
+        </section>
+      )}
+
       <section className="pb-24 lg:pb-32">
         <Container>
           <Reveal>

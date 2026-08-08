@@ -102,6 +102,36 @@ export const metaAdsProjects: MetaAdsCaseStudy[] = [
       { icon: 'MessageCircle', text: 'WhatsApp Status placement converted at roughly 4.6x lower cost than Facebook Feed.' },
       { icon: 'Target', text: 'Caught an 8.7% targeting leak and a zero-delivery region before scaling the budget 9x.' },
     ],
+    gallery: [
+      {
+        image: 'meta-ads-party-skoothings-ads-table-1',
+        caption: 'All 7 test ads ranked by cost per conversation in Ads Manager.',
+      },
+      {
+        image: 'meta-ads-party-skoothings-ads-table-2',
+        caption: 'Creative thumbnails alongside spend and impressions for each ad tested.',
+      },
+      {
+        image: 'meta-ads-party-skoothings-test4-video',
+        caption: 'Test Leads 4 Ad — the cheapest performer at ₦109.48/conversation, an art-supplies creative with a 52% hook rate.',
+      },
+      {
+        image: 'meta-ads-party-skoothings-test5-overview',
+        caption: 'Test Leads 5 Ad performance overview — 84 of the 158 total conversations came from this one ad.',
+      },
+      {
+        image: 'meta-ads-party-skoothings-test5-video',
+        caption: 'Test Leads 5 Ad — the highest-volume creative, 14,901 video plays and a 68.88% hold rate.',
+      },
+      {
+        image: 'meta-ads-party-skoothings-test2-video',
+        caption: 'Test Leads 2 Ad — a spelling and vocabulary-game creative, the third-cheapest conversation cost.',
+      },
+      {
+        image: 'meta-ads-party-skoothings-test2-placement',
+        caption: 'Platform-level placement breakdown for Test Leads 2 Ad, comparing reach against results.',
+      },
+    ],
     ctaTitle: 'Want to test before you scale your ad budget?',
     ctaDescription: "Let's find out what actually works for your audience before the big budget goes out.",
   },

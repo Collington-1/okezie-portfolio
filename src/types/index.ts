@@ -48,6 +48,11 @@ export interface MetaAdsStrategyStep {
   description: string
 }
 
+export interface MetaAdsGalleryImage {
+  image: string
+  caption: string
+}
+
 export interface MetaAdsCaseStudy {
   id: string
   title: string
@@ -65,6 +70,7 @@ export interface MetaAdsCaseStudy {
   outcomeTitle: string
   outcomeDescription: string
   highlights: { icon: string; text: string }[]
+  gallery?: MetaAdsGalleryImage[]
   ctaTitle: string
   ctaDescription: string
 }
