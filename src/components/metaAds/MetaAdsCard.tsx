@@ -19,7 +19,6 @@ export default function MetaAdsCard({ study }: { study: MetaAdsCaseStudy }) {
           src={getImage(study.image)}
           alt={`${study.title} Meta Ads results`}
           className="h-full w-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
-          loading="lazy"
         />
         <div className="absolute inset-0 flex items-end justify-center gap-3 bg-ink/0 p-5 opacity-0 transition-all duration-300 group-hover:bg-ink/50 group-hover:opacity-100">
           <Link

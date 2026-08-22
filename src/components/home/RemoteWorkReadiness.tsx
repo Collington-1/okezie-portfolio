@@ -52,7 +52,6 @@ export default function RemoteWorkReadiness() {
                     src={getImage(item.image)}
                     alt={item.title}
                     className="h-full w-full object-cover"
-                    loading="lazy"
                   />
                 </div>
                 <div className="p-5">

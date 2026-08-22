@@ -180,7 +180,6 @@ export default function MetaAdsProjectDetail() {
                       src={getImage(item.image)}
                       alt={item.caption}
                       className="w-full object-cover object-top"
-                      loading="lazy"
                     />
                     <p className="p-5 text-sm leading-relaxed text-muted">{item.caption}</p>
                   </div>

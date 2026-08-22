@@ -37,7 +37,6 @@ export default function TestimonialsSection() {
                     <img
                       src={getImage(t.photo)}
                       alt={t.name}
-                      loading="lazy"
                       className="h-11 w-11 shrink-0 rounded-full object-cover object-top ring-2 ring-primary/15"
                     />
                     <div>

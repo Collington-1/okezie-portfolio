@@ -42,7 +42,6 @@ export default function Booking() {
               title="Book a call with Okezie Collington"
               src={`https://cal.com/${CAL_LINK}?embed=true`}
               className="h-[720px] w-full border-0"
-              loading="lazy"
             />
           </Reveal>
 

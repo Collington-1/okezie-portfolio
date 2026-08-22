@@ -179,7 +179,6 @@ export default function DigitalLiteracyProgram() {
                     src={getImage(key)}
                     alt="Digital literacy training session for women in the Niger Delta"
                     className="h-full w-full object-cover"
-                    loading="lazy"
                   />
                 </div>
               </Reveal>

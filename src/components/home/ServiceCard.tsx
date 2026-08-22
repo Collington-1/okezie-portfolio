@@ -118,7 +118,6 @@ export default function ServiceCard({ service, isOpen, onToggle }: ServiceCardPr
                   src={getImage(service.image)}
                   alt={`Okezie Collington — ${service.title}`}
                   className="h-full w-full object-cover"
-                  loading="lazy"
                 />
               </div>
             </div>
