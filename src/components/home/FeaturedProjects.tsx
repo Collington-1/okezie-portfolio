@@ -6,7 +6,7 @@ import ProjectsGrid from '@/components/projects/ProjectsGrid'
 import { projects } from '@/data/projects'
 
 export default function FeaturedProjects() {
-  const featured = projects.filter((p) => p.featured).concat(projects.slice(0, 4)).slice(0, 4)
+  const featured = projects.filter((p) => p.featured).concat(projects.slice(0, 6)).slice(0, 6)
   const unique = Array.from(new Map(featured.map((p) => [p.id, p])).values())
 
   return (

@@ -5,6 +5,7 @@ import ServicesSection from '@/components/home/ServicesSection'
 import FeaturedProjects from '@/components/home/FeaturedProjects'
 import QASection from '@/components/home/QASection'
 import TestimonialsSection from '@/components/home/TestimonialsSection'
+import RemoteWorkReadiness from '@/components/home/RemoteWorkReadiness'
 
 export default function Home() {
   return (
@@ -37,6 +38,7 @@ export default function Home() {
       <FeaturedProjects />
       <QASection />
       <TestimonialsSection />
+      <RemoteWorkReadiness />
     </>
   )
 }

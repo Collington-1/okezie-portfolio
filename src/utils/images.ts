@@ -33,6 +33,11 @@ const digitalTrainingModules = import.meta.glob('../assets/images/digital-traini
   import: 'default',
 }) as Record<string, string>
 
+const remoteWorkModules = import.meta.glob('../assets/images/remote-work/*.webp', {
+  eager: true,
+  import: 'default',
+}) as Record<string, string>
+
 function toMap(modules: Record<string, string>): Record<string, string> {
   const map: Record<string, string> = {}
   for (const path in modules) {
@@ -50,6 +55,7 @@ const images: Record<string, string> = {
   ...toMap(testimonialModules),
   ...toMap(caseStudyModules),
   ...toMap(digitalTrainingModules),
+  ...toMap(remoteWorkModules),
 }
 
 export function getImage(key: string): string {
