@@ -9,7 +9,7 @@ import { getImage } from '@/utils/images'
 import { projects } from '@/data/projects'
 import type { ProjectCategory } from '@/types'
 
-const validCategories: (ProjectCategory | 'all')[] = ['all', 'website', 'app', 'seo', 'ai', 'ecommerce', 'meta-ads']
+const validCategories: (ProjectCategory | 'all')[] = ['all', 'website', 'app', 'plugin', 'seo', 'ai', 'ecommerce', 'meta-ads']
 
 export default function Projects() {
   const [searchParams, setSearchParams] = useSearchParams()

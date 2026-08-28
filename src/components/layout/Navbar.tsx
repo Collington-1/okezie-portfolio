@@ -25,6 +25,7 @@ const navItems: NavItem[] = [
     children: [
       { label: 'Websites', to: '/projects?category=website' },
       { label: 'Apps', to: '/projects?category=app' },
+      { label: 'WordPress Plugins', to: '/projects?category=plugin' },
       { label: 'Meta Ads', to: '/meta-ads-project' },
     ],
   },

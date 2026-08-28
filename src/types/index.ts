@@ -9,7 +9,7 @@ export interface Service {
   icon: string
 }
 
-export type ProjectCategory = 'website' | 'app' | 'seo' | 'ai' | 'ecommerce' | 'meta-ads'
+export type ProjectCategory = 'website' | 'app' | 'plugin' | 'seo' | 'ai' | 'ecommerce' | 'meta-ads'
 
 export interface StrategyStep {
   title: string

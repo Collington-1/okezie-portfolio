@@ -873,6 +873,7 @@ export const filterOptions: { label: string; value: Project['categories'][number
   { label: 'All', value: 'all' },
   { label: 'Website', value: 'website' },
   { label: 'App', value: 'app' },
+  { label: 'WordPress Plugins', value: 'plugin' },
   { label: 'SEO', value: 'seo' },
   { label: 'AI', value: 'ai' },
   { label: 'Ecommerce', value: 'ecommerce' },
