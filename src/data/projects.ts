@@ -866,6 +866,10 @@ export const projects: Project[] = [
       'Campaigns that pause and resume themselves at the daily cap',
     ],
     liveUrl: 'https://flowleadsapp.netlify.app/',
+    resources: [
+      { label: 'User Guide', url: '/FlowLeads-User-Guide.pdf' },
+      { label: 'Technical Manual', url: '/FlowLeads-Technical-Manual.pdf' },
+    ],
   },
 ]
 

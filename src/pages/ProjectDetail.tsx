@@ -1,5 +1,5 @@
 import { Link, Navigate, useParams } from 'react-router-dom'
-import { ArrowLeft, ArrowRight, ArrowUpRight, Check } from 'lucide-react'
+import { ArrowLeft, ArrowRight, ArrowUpRight, Check, Download } from 'lucide-react'
 import SEO from '@/components/ui/SEO'
 import Container from '@/components/ui/Container'
 import Reveal from '@/components/ui/Reveal'
@@ -83,6 +83,16 @@ export default function ProjectDetail() {
                   Visit live site <ArrowUpRight size={14} />
                 </a>
               )}
+              {project.resources?.map((resource) => (
+                <a
+                  key={resource.url}
+                  href={resource.url}
+                  download
+                  className="inline-flex items-center gap-1.5 font-semibold text-primary hover:text-primary-hover"
+                >
+                  {resource.label} <Download size={14} />
+                </a>
+              ))}
             </div>
           </Reveal>
         </Container>

@@ -35,6 +35,7 @@ export interface Project {
   liveUrl?: string
   githubUrl?: string
   featured?: boolean
+  resources?: { label: string; url: string }[]
 }
 
 export interface MetaAdsMetric {
