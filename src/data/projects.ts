@@ -912,6 +912,48 @@ export const projects: Project[] = [
     ],
     resources: [{ label: 'Download Plugin (.zip)', url: '/smart-documents-for-woocommerce.zip' }],
   },
+  {
+    id: 'flowleads-lead-capture',
+    title: 'FlowLeads Lead Capture',
+    client: 'FlowLeads',
+    categories: ['plugin'],
+    image: 'flowleads-lead-capture',
+    role: 'Founder & Developer',
+    technologies: ['PHP', 'WordPress Plugin API', 'WooCommerce', 'REST API'],
+    problem:
+      "Businesses running Facebook ads to a WordPress landing page collect leads through whatever form happens to be on that page — their own, WooCommerce checkout, Contact Form 7, WPForms, Gravity Forms, Elementor — and every one of those leads sits stranded on the WordPress site until someone copies it into a CRM by hand.",
+    solution:
+      "I built a WordPress plugin that connects any of those form sources straight to a FlowLeads account through a new authenticated API I added to the FlowLeads backend for exactly this purpose. Each source — its own built-in form, WooCommerce, Contact Form 7, WPForms, Gravity Forms, Elementor — can be turned on independently, with its own destination group and tag in FlowLeads, so a WooCommerce customer and a Facebook-ad lead never have to land in the same bucket.",
+    outcome:
+      "A single plugin that turns any WordPress site into a lead source for FlowLeads with no manual copying — submitted to the WordPress.org Plugin Directory and currently in review.",
+    overview:
+      "This grew directly out of FlowLeads itself: once the CRM could receive leads, the obvious next step was making sure leads never had to be typed in by hand in the first place. Rather than build one narrow integration, I mapped out the handful of form sources that cover the vast majority of real WordPress sites and built a connector for each, sharing one API layer underneath.",
+    roleDetails: [
+      'Designed and built the plugin end to end — PHP, WordPress hooks, settings UI',
+      'Added a new authenticated public API + API-key system to the FlowLeads backend for this plugin to call',
+      'Built five separate integrations: built-in form, WooCommerce, Contact Form 7, WPForms, Gravity Forms, Elementor Forms',
+      'Wrote it to WordPress.org Plugin Directory standards and submitted it for review',
+    ],
+    goals: [
+      'Get a lead into FlowLeads the moment someone submits a form — no manual entry',
+      'Support the form tools real WordPress sites already use, not just a bespoke one',
+      'Keep each lead source cleanly separated by group and tag on arrival',
+    ],
+    strategy: [
+      { title: 'One API, many sources', description: 'Built a single authenticated FlowLeads endpoint first, then five thin integrations on top of it — WooCommerce, Contact Form 7, WPForms, Gravity Forms, Elementor Forms — rather than five one-off builds.' },
+      { title: 'Auto-detect where possible', description: 'WPForms and Gravity Forms tag their own fields by type, so those integrations need zero configuration. Contact Form 7 doesn\'t, so that one gets a small per-form field-mapping screen instead.' },
+      { title: 'Build for review from day one', description: 'Sanitized input, nonces, capability checks, and a clear data-use disclosure from the first line of code, rather than retrofitting them before submission.' },
+    ],
+    highlights: [
+      'Five lead sources, each independently on/off with its own group and tag',
+      'Zero-config field detection for WPForms and Gravity Forms',
+      'Submitted to the WordPress.org Plugin Directory, in review',
+    ],
+    resources: [
+      { label: 'Download Plugin (.zip)', url: '/flowleads-lead-capture.zip' },
+      { label: 'FlowLeads (the CRM this connects to)', url: 'https://flowleadsapp.netlify.app/' },
+    ],
+  },
 ]
 
 export const filterOptions: { label: string; value: Project['categories'][number] | 'all' }[] = [
