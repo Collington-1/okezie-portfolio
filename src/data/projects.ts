@@ -871,6 +871,47 @@ export const projects: Project[] = [
       { label: 'Technical Manual', url: '/FlowLeads-Technical-Manual.pdf' },
     ],
   },
+  {
+    id: 'smart-documents-for-woocommerce',
+    title: 'Smart Documents for WooCommerce',
+    client: 'Smart Documents for WooCommerce',
+    categories: ['plugin', 'ecommerce'],
+    image: 'smart-documents-for-woocommerce',
+    role: 'Plugin Developer',
+    technologies: ['PHP', 'WordPress Plugin API', 'WooCommerce', 'Dompdf', 'MySQL'],
+    problem:
+      "WooCommerce stores need professional invoices, receipts and delivery paperwork, but the usual options are a paid SaaS subscription billed in dollars, or a plugin that quietly depends on a third-party API that can go down, get rate-limited, or vanish. Merchants running cash-on-delivery in emerging markets have it worse — most invoicing plugins assume a courier API that simply doesn't exist where they operate.",
+    solution:
+      "I built Smart Documents for WooCommerce from the ground up: a self-contained plugin that generates polished invoices, receipts, packing slips and delivery notes with a locally-bundled PDF engine — no external API, no subscription, no account to create. Alongside it, a toggleable Delivery & Dispatch module handles what a lot of invoicing plugins ignore entirely: assigning a rider, tracking delivery status, and reconciling cash-on-delivery, in a way that fits how small merchants and last-mile delivery actually work in markets like Nigeria.",
+    outcome:
+      "A free-tier plugin that doesn't just claim to work — it was verified against a real running WooCommerce store at every stage, including WordPress's High-Performance Order Storage, RTL rendering, PHP 7.4 compatibility, and WordPress.org's official Plugin Check tool, which reports zero errors and zero warnings.",
+    overview:
+      "This was a full build from a written product brief to a submission-ready plugin, done the way I'd want a plugin I depend on to be built: correctness verified against a live install, not just written and assumed to work. That meant catching and fixing real bugs along the way — a PDF rendering engine that didn't clear floats the way a browser does, a WooCommerce query method that silently returned unfiltered results on certain storage configurations, a reserved WordPress query-variable name that broke every delivery tracking link — the kind of issues that only surface once code actually runs against real data, not in review.",
+    roleDetails: [
+      'Full plugin architecture: custom post types, document engine, numbering system, admin UI',
+      'Delivery & Dispatch module: rider profiles, status tracking, cash-on-delivery reconciliation',
+      'Security: capability + nonce checks throughout, non-guessable tokenized guest/customer downloads',
+      'Compliance: HPOS compatibility, WPCS coding standards, i18n/RTL, GDPR-style data export & erasure',
+    ],
+    goals: [
+      'Generate professional documents with zero third-party dependency or recurring cost',
+      'Support the delivery realities of small merchants and last-mile logistics in emerging markets',
+      'Ship something that would actually pass WordPress.org review, not just look like it would',
+    ],
+    strategy: [
+      { title: 'Verify against a real store, not a review', description: 'Every feature was exercised against an actual running WooCommerce install — WP-CLI scripts, real anonymous HTTP requests, real generated PDFs — rather than trusted on the strength of the code alone.' },
+      { title: 'Design for the merchant, not the demo', description: 'Built the Delivery & Dispatch module around how small businesses and riders actually operate — manual status updates and cash reconciliation — instead of assuming a courier API integration nobody in the target market has.' },
+      { title: 'Treat the submission bar as the real bar', description: 'Ran WordPress.org\'s own Plugin Check tool repeatedly through development, fixing real findings — including a plugin rename to comply with WordPress\'s trademark policy — until it reported a clean pass.' },
+    ],
+    highlights: [
+      'Zero errors, zero warnings on WordPress.org\'s official Plugin Check tool',
+      'HPOS-compatible — verified with order data read and written exclusively through WooCommerce\'s own APIs',
+      'Delivery & Dispatch module: rider assignment, status tracking, cash-on-delivery reconciliation',
+      'Secure guest & customer document access via non-guessable, tokenized download links',
+      'RTL layout and translation-ready, verified against a live Arabic-locale render',
+    ],
+    resources: [{ label: 'Download Plugin (.zip)', url: '/smart-documents-for-woocommerce.zip' }],
+  },
 ]
 
 export const filterOptions: { label: string; value: Project['categories'][number] | 'all' }[] = [

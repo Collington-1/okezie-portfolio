@@ -9,6 +9,8 @@ import { getImage } from '@/utils/images'
 
 const categoryLabels: Record<string, string> = {
   website: 'Website',
+  app: 'App',
+  plugin: 'WordPress Plugin',
   seo: 'SEO',
   ai: 'AI',
   ecommerce: 'Ecommerce',

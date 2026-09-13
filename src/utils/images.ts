@@ -8,6 +8,14 @@ const projectModules = import.meta.glob('../assets/images/projects/*.webp', {
   import: 'default',
 }) as Record<string, string>
 
+// PNG variant of the same folder — used for illustrated project cards
+// (e.g. app/plugin projects with no live site to screenshot) rather than
+// converting every one through a webp toolchain.
+const projectPngModules = import.meta.glob('../assets/images/projects/*.png', {
+  eager: true,
+  import: 'default',
+}) as Record<string, string>
+
 const galleryModules = import.meta.glob('../assets/images/gallery/*.webp', {
   eager: true,
   import: 'default',
@@ -41,7 +49,7 @@ const remoteWorkModules = import.meta.glob('../assets/images/remote-work/*.webp'
 function toMap(modules: Record<string, string>): Record<string, string> {
   const map: Record<string, string> = {}
   for (const path in modules) {
-    const key = path.split('/').pop()!.replace(/\.webp$/, '')
+    const key = path.split('/').pop()!.replace(/\.(webp|png)$/, '')
     map[key] = modules[path]
   }
   return map
@@ -50,6 +58,7 @@ function toMap(modules: Record<string, string>): Record<string, string> {
 const images: Record<string, string> = {
   ...toMap(portraitModules),
   ...toMap(projectModules),
+  ...toMap(projectPngModules),
   ...toMap(galleryModules),
   ...toMap(certModules),
   ...toMap(testimonialModules),
