@@ -87,6 +87,23 @@ export interface Testimonial {
   photo: string
 }
 
+export interface Publication {
+  id: string
+  title: string
+  authors: string
+  role: string
+  journal: string
+  citation: string
+  year: string
+  identifier: string
+  summary: string
+  methodology: string
+  keyFindings: string[]
+  whyItMatters: string
+  metrics: { label: string; value: string }[]
+  pdfUrl: string
+}
+
 export type GalleryCategory =
   | 'training'
   | 'workstation'

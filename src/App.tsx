@@ -11,6 +11,7 @@ import Booking from '@/pages/Booking'
 import MetaAdsProject from '@/pages/MetaAdsProject'
 import MetaAdsProjectDetail from '@/pages/MetaAdsProjectDetail'
 import DigitalLiteracyProgram from '@/pages/DigitalLiteracyProgram'
+import Publications from '@/pages/Publications'
 
 export default function App() {
   return (
@@ -28,6 +29,7 @@ export default function App() {
           <Route path="/meta-ads-project" element={<MetaAdsProject />} />
           <Route path="/meta-ads-project/:id" element={<MetaAdsProjectDetail />} />
           <Route path="/digital-literacy-program" element={<DigitalLiteracyProgram />} />
+          <Route path="/publications" element={<Publications />} />
         </Routes>
       </Layout>
     </>

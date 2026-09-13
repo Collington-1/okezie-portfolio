@@ -1,4 +1,5 @@
-import { GraduationCap } from 'lucide-react'
+import { ArrowRight, GraduationCap } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import Container from '@/components/ui/Container'
 import SectionHeader from '@/components/ui/SectionHeader'
 import Reveal from '@/components/ui/Reveal'
@@ -20,9 +21,13 @@ export default function EducationCerts() {
               </span>
               <h3 className="mt-5 text-lg font-semibold text-ink">{education.degree}</h3>
               <p className="mt-1 text-sm text-muted">{education.institution}</p>
-              <p className="mt-auto pt-4 text-xs font-medium uppercase tracking-widest text-secondary">
-                {education.period}
-              </p>
+              <p className="mt-4 text-xs font-medium uppercase tracking-widest text-secondary">{education.period}</p>
+              <Link
+                to="/publications"
+                className="mt-auto inline-flex items-center gap-1.5 pt-4 text-sm font-semibold text-primary hover:text-primary-hover"
+              >
+                Read my published research <ArrowRight size={14} />
+              </Link>
             </div>
           </Reveal>
 

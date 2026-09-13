@@ -30,6 +30,7 @@ const navItems: NavItem[] = [
     ],
   },
   { label: 'Digital Trainer', to: '/digital-literacy-program' },
+  { label: 'Publications', to: '/publications' },
   { label: 'Gallery', to: '/gallery' },
   { label: 'Contact', to: '/contact' },
 ]
