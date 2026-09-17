@@ -954,6 +954,47 @@ export const projects: Project[] = [
       { label: 'FlowLeads (the CRM this connects to)', url: 'https://flowleadsapp.netlify.app/' },
     ],
   },
+  {
+    id: 'bookflow-booking-scheduling',
+    title: 'BookFlow – Booking & Scheduling',
+    client: 'BookFlow',
+    categories: ['plugin'],
+    image: 'bookflow-booking-scheduling',
+    role: 'Plugin Developer',
+    technologies: ['PHP', 'WordPress Plugin API', 'MySQL', 'Gutenberg', 'Elementor'],
+    problem:
+      "Businesses that want to take bookings on WordPress usually end up choosing between a paid SaaS scheduling tool that keeps their customer and booking data off their own site, or a shallow plugin that handles one simple form and breaks the moment they need staff, multiple locations, or a shareable public scheduling link.",
+    solution:
+      "I built BookFlow as a self-contained, WordPress-native booking and scheduling workspace: services with duration, price, capacity, staff and location assignment; working hours with availability exceptions and buffers; an admin calendar; shareable public scheduling pages with custom booking questions; one-time ticketed events with attendee registration; and a full email notification system running entirely on WordPress's own mail — no mandatory external API or subscription.",
+    outcome:
+      "A production-shaped plugin across roughly 100 PHP files covering the full booking lifecycle — booking, rescheduling, cancellation, staff and location assignment, admin management — shipped with Gutenberg blocks, shortcodes and Elementor widgets so it works with whichever page builder a site already runs, plus a documented extension-point architecture for a future Premium add-on that the free plugin never depends on.",
+    overview:
+      "BookFlow started from a simple observation: most WordPress booking plugins either lock a business into a subscription SaaS tool bolted onto their site, or only cover the simplest single-service, single-staff case. I designed it so every booking, customer and availability record lives entirely inside WordPress's own database, with optional integrations — calendar sync, video conferencing, payments — kept opt-in and built to fail gracefully rather than break core booking if they're not configured.",
+    roleDetails: [
+      'Full plugin architecture across ~100 PHP files: Booking, Scheduling, Events, Staff, Locations, Customers, Notifications, Admin',
+      'Three frontend booking widget layouts (classic, calendar-first, express), plus self-service rescheduling and cancellation',
+      'Gutenberg blocks, shortcodes and Elementor widgets for the booking form, scheduling page and event booking',
+      "Security: capability- and nonce-checked admin actions, token- not ID-based public booking links, rate-limited public endpoints",
+    ],
+    goals: [
+      "Keep every booking, customer and availability record inside the site's own WordPress database",
+      'Cover the full real-world booking lifecycle — staff, locations, buffers, exceptions, rescheduling — not just a single form',
+      'Work with whichever page builder or editor a site already runs, instead of forcing a new one',
+    ],
+    strategy: [
+      { title: 'Own the data, skip the subscription', description: "Built bookings, availability and customers to live entirely in WordPress's own database and mail system, so the plugin never depends on an external account to function." },
+      { title: 'Design for the whole lifecycle, not just the form', description: 'Modeled services, staff, locations, working hours, availability exceptions, buffers and booking windows as first-class pieces, so the scheduling logic holds up under real, messy business rules.' },
+      { title: 'Meet the site where it already is', description: "Shipped Gutenberg blocks, shortcodes and Elementor widgets side by side, so BookFlow drops into whatever page-building setup a site already runs instead of requiring a rebuild." },
+    ],
+    highlights: [
+      '~100-file modular architecture: Booking, Scheduling, Events, Staff, Locations, Notifications, Admin',
+      'Three booking widget layouts, plus self-service rescheduling and cancellation, included in the free tier',
+      'Gutenberg, shortcode and Elementor support built in from day one',
+      'Token-based (not ID-based) public booking links, with rate limiting on public endpoints',
+      'Documented action/filter extension points for a future Premium tier — the free plugin never depends on it',
+    ],
+    resources: [{ label: 'Download Plugin (.zip)', url: '/bookflow-booking-scheduling.zip' }],
+  },
 ]
 
 export const filterOptions: { label: string; value: Project['categories'][number] | 'all' }[] = [
