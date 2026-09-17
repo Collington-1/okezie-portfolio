@@ -995,6 +995,128 @@ export const projects: Project[] = [
     ],
     resources: [{ label: 'Download Plugin (.zip)', url: '/bookflow-booking-scheduling.zip' }],
   },
+  {
+    id: 'fairmarket-ecommerce',
+    title: 'Fairmarket',
+    client: 'Fairmarket',
+    categories: ['app', 'ecommerce'],
+    image: 'fairmarket-ecommerce',
+    role: 'Founder & Developer',
+    technologies: ['Next.js', 'TypeScript', 'Supabase', 'Paystack', 'Vercel'],
+    problem:
+      "Nigerian buyers shopping locally have no easy way to compare prices across sellers before committing, and small sellers — especially outside Lagos — have no real online storefront beyond a WhatsApp status. Most marketplace platforms are either built for a different market's payment and trust norms, or too shallow to handle real negotiation, verification and disputes.",
+    solution:
+      "I designed and built Fairmarket as a location-first marketplace for Nigeria, launching Port Harcourt-first: full buyer and seller accounts, price negotiation and quote requests, in-app chat, seller verification and moderation, a real Paystack-backed order lifecycle from payment to delivery to dispute resolution, reviews gated to real completed orders, seller subscriptions/promotions/coupons, and an admin console with platform-wide analytics — all on Supabase with Row Level Security enforcing who can see and change what at the database level, not just in the UI.",
+    outcome:
+      "A 15-phase, gated build — each phase reviewed and verified before the next started — resulting in a marketplace with 43 database migrations and 249 automated pgTAP assertions passing against a real Supabase project, plus full manual browser verification of every core loop: buy → pay → fulfil → complete, report → moderate, verify → approve. Several real bugs were caught by that verification and documented rather than quietly patched — including a Postgres default-permissions gap that would have let any signed-in user call two payment-critical functions meant for the system alone.",
+    overview:
+      "Fairmarket is the most complete product I've built solo: not a demo, but development done in explicit, reviewable phases against a real database, with a genuine automated test suite (Vitest + pgTAP + Playwright) and honest documentation of what still needs real-world credentials — Paystack keys, a Meta Pixel ID — before its payment and analytics code, already correct against those providers' documented shapes, gets exercised against the real thing.",
+    roleDetails: [
+      'Full-stack build: Next.js App Router frontend, Supabase Postgres schema with Row Level Security',
+      'Real Paystack order lifecycle: pending payment → paid → fulfilled → delivered → completed, plus disputes and refunds',
+      'Negotiation, in-app chat, seller verification/moderation, and order-gated reviews',
+      "Seller subscriptions, promotions and admin-issued coupons; platform analytics built from Fairmarket's own data",
+    ],
+    goals: [
+      'Give Nigerian buyers a real way to compare and negotiate prices before buying',
+      'Give small sellers a genuine storefront and order system, not just a chat number',
+      'Verify every core flow against a real database and real browser sessions, not just written code',
+    ],
+    strategy: [
+      { title: 'Build in gated, reviewable phases', description: 'Shipped 15 phases in sequence — schema, discovery, auth, seller tools, verification, payments, chat, reviews, monetization, SEO, admin analytics, security hardening — each one checked before the next began.' },
+      { title: 'Enforce access at the database, not the UI', description: "Row Level Security policies decide who can read or write what, so a missing frontend check can never expose another buyer's order or another seller's private dashboard." },
+      { title: 'Verify for real, not just write and assume', description: '249 pgTAP assertions plus full manual browser verification of every critical loop caught real bugs — including one where a security-critical function was callable by any user due to a Postgres default the schema had to explicitly revoke.' },
+    ],
+    highlights: [
+      '43 database migrations, 249 pgTAP assertions passing against a real Supabase project',
+      'Full Paystack-backed order lifecycle: payment → fulfilment → delivery → completion, with disputes and refunds',
+      'Row Level Security enforced at the database layer for every buyer, seller and admin action',
+      'Seller verification, moderation, in-app chat and order-gated reviews, all live end to end',
+      'A real bug — payment-critical functions callable by any signed-in user — caught by testing and fixed, not assumed safe',
+    ],
+    liveUrl: 'https://fairmarket-ecommerce.vercel.app/',
+  },
+  {
+    id: 'solarplan-ng',
+    title: 'SolarPlan NG',
+    client: 'SolarPlan NG',
+    categories: ['app'],
+    image: 'solarplan-ng',
+    role: 'Founder & Developer',
+    technologies: ['Next.js', 'TypeScript', 'PostgreSQL', 'Prisma', 'Vercel'],
+    problem:
+      "Sizing a solar setup in Nigeria usually means guessing, or trusting whatever an installer quotes — there's no independent, computed way for a household or business to know how much panel, battery and inverter capacity they actually need before they buy, in a market where power costs and reliability vary block by block.",
+    solution:
+      "I built SolarPlan NG around a real sizing engine — the exact function every part of the product calls, not a hand-typed mockup — that turns a household's actual appliance load into panel, battery and inverter recommendations, backed by 37 state-specific landing pages, an upgrade analyzer for existing systems, a sizing-guide content hub, guest checkout for reports and invoicing with no account required, a dealer/installer/electrician directory, and a public reference-data API that a companion WordPress plugin and Expo/React Native mobile app both reuse.",
+    outcome:
+      'All 10 build phases complete, including a dedicated hardening pass — input-validation gaps closed, rate limiting added, a dark-mode contrast sweep, a mobile layout-overflow bug fixed, private-page SEO indexing corrected, and an API cost circuit breaker put in place — with a documented launch checklist and rollback plan ready for the moment real payment and API credentials are added.',
+    overview:
+      "SolarPlan NG deliberately skips accounts for its transactional flows — checkout, invoicing and vendor registration all use a one-time emailed bearer link instead of a login, a considered decision, not a shortcut. The calculator, upgrade analyzer, guides and reference-data API all work with zero configuration; what needs real credentials (Postgres, Paystack, Google Places) is documented plainly rather than left to fail silently.",
+    roleDetails: [
+      'Built the core sizing/calculation engine and its 37 state-specific landing pages',
+      'Guest checkout and invoicing flow using one-time bearer links instead of user accounts',
+      'Public reference-data and calculation API, reused by a companion WordPress plugin and Expo mobile app',
+      'A dedicated hardening pass: rate limiting, input validation, SEO indexing fixes, API cost circuit breaker',
+    ],
+    goals: [
+      'Replace guesswork with a real, independently computed solar sizing recommendation',
+      'Make checkout and invoicing frictionless with no account required',
+      'Build one API-first engine that the website, a WordPress plugin and a mobile app could all share',
+    ],
+    strategy: [
+      { title: 'One engine, every surface', description: 'Built the sizing calculation as a single reusable function, then had the calculator, upgrade analyzer, WordPress plugin and mobile app all call the same engine instead of re-implementing it.' },
+      { title: 'Guest-first, not login-first', description: "Designed checkout, invoicing and vendor registration around a one-time bearer link sent by email, removing the signup friction a first-time buyer shouldn't have to clear." },
+      { title: 'Harden before launch, not after', description: 'Ran a dedicated security and QA pass — rate limiting, input validation, a mobile layout bug, SEO indexing — and documented exactly what was checked and fixed before calling it launch-ready.' },
+    ],
+    highlights: [
+      'All 10 build phases complete, including a dedicated hardening & launch phase',
+      '37 state-specific calculator landing pages backed by one real sizing engine',
+      'Guest checkout and invoicing — no account required — via one-time bearer links',
+      'One API reused by the website, a companion WordPress plugin and an Expo/React Native mobile app',
+      'A documented launch checklist and rollback plan ready ahead of real deploy',
+    ],
+    liveUrl: 'https://solarplan-ng.vercel.app/',
+  },
+  {
+    id: 'vidflow',
+    title: 'VidFlow',
+    client: 'VidFlow',
+    categories: ['app'],
+    image: 'vidflow',
+    role: 'Founder & Developer',
+    technologies: ['Next.js', 'TypeScript', 'Supabase', 'Cloudflare R2', 'Tailwind CSS'],
+    problem:
+      "Teams that need to record a screen walkthrough, run a hiring pipeline, host a webinar and deliver a course end up stitching together four separate tools — a recorder, a meeting app, an ATS and an LMS — none of which share a library or a viewer link.",
+    solution:
+      "I'm building VidFlow as one video workspace covering all four: screen/webcam/audio recording with chunked upload, live meetings and webinars, video-based recruitment, and course/training delivery, sharing a single video library, short links and a public viewer across every use case. It runs entirely on free-tier infrastructure — GitHub, Netlify, Supabase and Cloudflare R2 — by design, so the cost of running it never scales faster than the product does.",
+    outcome:
+      "Auth, roles, plans/entitlements, an owner/admin console and the marketing site are live, and the core recorder — screen, camera and audio capture with chunked upload to Cloudflare R2, a video library, shareable short links and a public viewer — now works end to end. It's an active build, not a finished product yet: annotations and cursor effects are next, with meetings, recruitment and course tools still ahead on the roadmap.",
+    overview:
+      "VidFlow is the earliest-stage of my current product builds, and I'm keeping it that way on purpose — shipping the recorder as a real, working core before layering on meetings, recruitment and course tools, rather than building all four shallowly at once. Every environment variable is optional: the app runs and renders with none set, degrading auth and recording to clear 'not configured' messages instead of crashing.",
+    roleDetails: [
+      'Designed the four-product roadmap: recording, meetings, recruitment and course tools sharing one library',
+      'Built auth, roles, plans/entitlements and the owner/admin console',
+      'Built the core recorder: chunked screen/camera/audio upload to Cloudflare R2, video library, short links, public viewer',
+      'Chose free-tier infrastructure (GitHub, Netlify, Supabase, Cloudflare R2) deliberately, from day one',
+    ],
+    goals: [
+      'Replace four separate tools — recorder, meeting app, ATS, LMS — with one shared video library',
+      'Ship a genuinely working core (recording) before adding breadth',
+      'Keep infrastructure cost near zero until the product has proven it needs more',
+    ],
+    strategy: [
+      { title: 'Ship depth before breadth', description: 'Built the recorder to a real, working standard first — chunked upload, a library, short links, a public viewer — rather than shipping four shallow features at once.' },
+      { title: 'Design for zero configuration', description: 'The app runs and renders with no environment variables set at all, showing a clear "not configured" message instead of crashing, so the UI is always explorable.' },
+      { title: 'Start on free-tier infrastructure', description: 'Chose GitHub, Netlify, Supabase and Cloudflare R2 specifically so the product could exist and grow before it needed to justify hosting costs.' },
+    ],
+    highlights: [
+      'Core recorder live end to end: chunked screen/camera/audio upload to Cloudflare R2',
+      'Video library, shareable short links and a public viewer, all working now',
+      'Runs and renders with zero environment variables configured',
+      'Built on entirely free-tier infrastructure by design',
+    ],
+    liveUrl: 'https://vidflow-app-alpha.vercel.app/',
+  },
 ]
 
 export const filterOptions: { label: string; value: Project['categories'][number] | 'all' }[] = [
