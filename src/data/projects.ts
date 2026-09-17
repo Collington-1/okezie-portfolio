@@ -993,7 +993,10 @@ export const projects: Project[] = [
       'Token-based (not ID-based) public booking links, with rate limiting on public endpoints',
       'Documented action/filter extension points for a future Premium tier — the free plugin never depends on it',
     ],
-    resources: [{ label: 'Download Plugin (.zip)', url: '/bookflow-booking-scheduling.zip' }],
+    resources: [
+      { label: 'Download Plugin (.zip)', url: '/bookflow-booking-scheduling.zip' },
+      { label: 'Tech Stack Explained (PDF)', url: '/BookFlow-Tech-Stack-Explained.pdf' },
+    ],
   },
   {
     id: 'fairmarket-ecommerce',
@@ -1035,6 +1038,7 @@ export const projects: Project[] = [
       'A real bug — payment-critical functions callable by any signed-in user — caught by testing and fixed, not assumed safe',
     ],
     liveUrl: 'https://fairmarket-ecommerce.vercel.app/',
+    resources: [{ label: 'Tech Stack Explained (PDF)', url: '/Fairmarket-Tech-Stack-Explained.pdf' }],
   },
   {
     id: 'solarplan-ng',
@@ -1076,6 +1080,7 @@ export const projects: Project[] = [
       'A documented launch checklist and rollback plan ready ahead of real deploy',
     ],
     liveUrl: 'https://solarplan-ng.vercel.app/',
+    resources: [{ label: 'Tech Stack Explained (PDF)', url: '/SolarPlan-NG-Tech-Stack-Explained.pdf' }],
   },
   {
     id: 'vidflow',
@@ -1116,6 +1121,7 @@ export const projects: Project[] = [
       'Built on entirely free-tier infrastructure by design',
     ],
     liveUrl: 'https://vidflow-app-alpha.vercel.app/',
+    resources: [{ label: 'Technical Documentation (PDF)', url: '/VidFlow-Technical-Documentation.pdf' }],
   },
 ]
 
