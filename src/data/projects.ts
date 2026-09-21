@@ -1037,7 +1037,7 @@ export const projects: Project[] = [
       'Seller verification, moderation, in-app chat and order-gated reviews, all live end to end',
       'A real bug — payment-critical functions callable by any signed-in user — caught by testing and fixed, not assumed safe',
     ],
-    liveUrl: 'https://fairmarket-ecommerce.vercel.app/',
+    liveUrl: 'https://fairmarketapp.vercel.app/',
     resources: [{ label: 'Tech Stack Explained (PDF)', url: '/Fairmarket-Tech-Stack-Explained.pdf' }],
   },
   {
